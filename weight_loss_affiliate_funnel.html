@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weight Loss Affiliate Funnel – SlimCrystal | Digistore24</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #3B6D11;
+    --green-light: #639922;
+    --green-pale: #EAF3DE;
+    --green-mid: #C0DD97;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --amber-mid: #FAC775;
+    --coral: #D85A30;
+    --coral-pale: #FAECE7;
+    --gray-dark: #2C2C2A;
+    --gray-mid: #5F5E5A;
+    --gray-light: #F1EFE8;
+    --gray-border: #D3D1C7;
+    --white: #ffffff;
+    --text: #1a1a18;
+    --text-muted: #5F5E5A;
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f8f6f0;
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.3;
+  }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-border);
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  nav::-webkit-scrollbar { display: none; }
+  nav a {
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all .2s;
+  }
+  nav a:hover, nav a.active {
+    color: var(--green);
+    border-bottom-color: var(--green);
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .section-label {
+    display: inline-block;
+    background: var(--green-pale);
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin-bottom: .5rem;
+    color: var(--text);
+  }
+
+  .section-sub {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 2rem;
+    max-width: 540px;
+  }
+
+  /* ── FUNNEL OVERVIEW ── */
+  .funnel-hero {
+    background: var(--gray-dark);
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .funnel-hero .label {
+    background: rgba(99,153,34,.25);
+    color: #C0DD97;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 1.2rem;
+  }
+  .funnel-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--white);
+    margin-bottom: .8rem;
+  }
+  .funnel-hero p {
+    color: #B4B2A9;
+    max-width: 560px;
+    margin: 0 auto 2rem;
+    font-size: 17px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .hero-meta-item {
+    text-align: center;
+  }
+  .hero-meta-item .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #C0DD97;
+    display: block;
+  }
+  .hero-meta-item .lbl {
+    font-size: 12px;
+    color: #888780;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+
+  .funnel-steps {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--gray-border);
+  }
+  .funnel-step {
+    flex: 1;
+    min-width: 120px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-right: 1px solid var(--gray-border);
+    position: relative;
+  }
+  .funnel-step:last-child { border-right: none; }
+  .funnel-step .step-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--green-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto .8rem;
+    font-size: 20px;
+  }
+  .funnel-step .step-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: .3rem;
+  }
+  .funnel-step .step-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .card-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--gray-dark);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .card-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  /* ── LANDING PAGE ── */
+  .lp-preview {
+    background: #fdfaf5;
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  .lp-bar {
+    background: var(--gray-light);
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border-bottom: 1px solid var(--gray-border);
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .lp-bar-url {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 11px;
+    color: var(--text-muted);
+    flex: 1;
+    max-width: 300px;
+  }
+
+  .lp-body {
+    padding: 0;
+  }
+
+  .lp-announcement {
+    background: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: .7rem 1rem;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .lp-hero {
+    background: linear-gradient(160deg, #f0ede5 0%, #e8f0d8 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .lp-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: .8rem;
+  }
+  .lp-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: var(--gray-dark);
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lp-headline em {
+    color: var(--green-light);
+    font-style: italic;
+  }
+  .lp-subhead {
+    font-size: 17px;
+    color: #444;
+    max-width: 540px;
+    margin: 0 auto 1.8rem;
+    line-height: 1.6;
+  }
+  .lp-cta-btn {
+    display: inline-block;
+    background: var(--green);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: .5rem;
+  }
+  .lp-cta-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: .5rem;
+  }
+
+  .lp-section {
+    padding: 2rem;
+    border-top: 1px solid var(--gray-border);
+  }
+  .lp-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--gray-dark);
+  }
+  .lp-section p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: .8rem;
+    line-height: 1.7;
+  }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .pain-item {
+    background: var(--coral-pale);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    border-left: 3px solid var(--coral);
+  }
+  .pain-item .icon { font-size: 20px; margin-bottom: .4rem; }
+  .pain-item p { font-size: 14px; color: #4A1B0C; margin: 0; }
+
+  .benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .benefit-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: .8rem;
+    padding: .6rem 0;
+    border-bottom: 1px solid var(--gray-light);
+    font-size: 15px;
+    color: #333;
+  }
+  .benefit-list li:last-child { border-bottom: none; }
+  .benefit-list li .check {
+    width: 20px;
+    height: 20px;
+    background: var(--green-pale);
+    color: var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .story-box {
+    background: var(--amber-light);
+    border-left: 4px solid var(--amber-mid);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+  .story-box .author {
+    font-size: 13px;
+    color: var(--amber);
+    font-weight: 600;
+    margin-bottom: .5rem;
+  }
+  .story-box p {
+    font-size: 15px;
+    color: #41330a;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .trust-bar {
+    background: var(--gray-light);
+    padding: 1.2rem 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid var(--gray-border);
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* ── THANK YOU PAGE ── */
+  .ty-preview {
+    background: var(--green-pale);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  .ty-body {
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .ty-icon {
+    width: 72px;
+    height: 72px;
+    background: var(--green);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 1.5rem;
+  }
+  .ty-body h2 {
+    font-size: 1.8rem;
+    margin-bottom: .8rem;
+    color: var(--gray-dark);
+  }
+  .ty-body p {
+    color: #444;
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+  }
+  .ty-teaser {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+  .ty-teaser h4 {
+    font-size: 1rem;
+    margin-bottom: .6rem;
+    color: var(--gray-dark);
+  }
+  .ty-teaser p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* ── EMAILS ── */
+  .email-tabs {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .email-tab {
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--gray-border);
+    background: var(--white);
+    color: var(--text-muted);
+    transition: all .2s;
+  }
+  .email-tab.active {
+    background: var(--gray-dark);
+    color: var(--white);
+    border-color: var(--gray-dark);
+  }
+
+  .email-card {
+    display: none;
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .email-card.active { display: block; }
+
+  .email-meta {
+    background: var(--gray-light);
+    padding: 1rem 1.5rem;
+    font-size: 13px;
+    border-bottom: 1px solid var(--gray-border);
+  }
+  .email-meta-row {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: .3rem;
+  }
+  .email-meta-row:last-child { margin-bottom: 0; }
+  .email-meta .field {
+    color: var(--text-muted);
+    min-width: 60px;
+    font-weight: 500;
+  }
+  .email-meta .value { color: var(--text); }
+  .email-meta .value.subject { font-weight: 600; color: var(--gray-dark); }
+
+  .email-body {
+    padding: 1.5rem;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+  }
+  .email-body p { margin-bottom: 1rem; }
+  .email-body .greeting { font-weight: 600; color: var(--gray-dark); }
+  .email-body .cta-block {
+    margin: 1.5rem 0;
+    padding: 1.2rem;
+    background: var(--green-pale);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--green);
+  }
+  .email-body .cta-block p { margin: 0 0 .8rem; color: #2C4A0E; }
+  .email-body .cta-link {
+    display: inline-block;
+    background: var(--green);
+    color: var(--white);
+    padding: .6rem 1.5rem;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .email-body .sign {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray-light);
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  /* ── BONUS ── */
+  .bonus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .bonus-card {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+  }
+  .bonus-card .b-header {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: .8rem;
+  }
+  .bonus-card .b-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .b-icon.green { background: var(--green-pale); }
+  .b-icon.amber { background: var(--amber-light); }
+  .b-icon.coral { background: var(--coral-pale); }
+  .bonus-card .b-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+  .bonus-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .bonus-card ul li {
+    padding: .5rem 0;
+    font-size: 14px;
+    color: var(--text);
+    border-bottom: 1px solid var(--gray-light);
+    line-height: 1.5;
+  }
+  .bonus-card ul li:last-child { border-bottom: none; }
+  .bonus-card ul li strong {
+    display: block;
+    font-size: 13px;
+    color: var(--green);
+    font-weight: 600;
+    margin-bottom: .15rem;
+  }
+
+  /* ── AD COPY ── */
+  .ad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+  .ad-card {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .ad-img {
+    background: linear-gradient(135deg, #e8f0d8, #d5e8b5);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    border-bottom: 1px solid var(--gray-border);
+  }
+  .ad-content {
+    padding: 1rem;
+  }
+  .ad-platform {
+    font-size: 11px;
+    color: var(--green);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: .4rem;
+  }
+  .ad-content p {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: .6rem;
+  }
+  .ad-headline {
+    font-weight: 600 !important;
+    color: var(--gray-dark) !important;
+    font-size: 15px !important;
+  }
+  .ad-cta-tag {
+    display: inline-block;
+    background: var(--green-pale);
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--gray-border);
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--gray-dark);
+    color: #888780;
+    text-align: center;
+    padding: 2rem;
+    font-size: 13px;
+    margin-top: 3rem;
+  }
+  .footer a { color: #C0DD97; text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .lp-hero { padding: 2rem 1rem; }
+    .funnel-steps { flex-direction: column; }
+    .funnel-step { border-right: none; border-bottom: 1px solid var(--gray-border); }
+    .funnel-step:last-child { border-bottom: none; }
+    nav a { padding: .8rem .8rem; font-size: 12px; }
+    .ty-body { padding: 2rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#overview" class="active">Overview</a>
+  <a href="#landing-page">Landing Page</a>
+  <a href="#thankyou">Thank You Page</a>
+  <a href="#emails">Email Funnel</a>
+  <a href="#bonus">Bonus</a>
+</nav>
+
+<!-- HERO -->
+<div class="funnel-hero">
+  <div class="label">Digistore24 Affiliate Funnel</div>
+  <h1>Weight Loss Funnel<br>for Busy Men & Women 25–45</h1>
+  <p>A complete, plug-and-play affiliate funnel promoting <strong>SlimCrystal</strong> — a top-converting Digistore24 weight loss product with natural, science-backed messaging.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item"><span class="num">4</span><span class="lbl">Funnel Assets</span></div>
+    <div class="hero-meta-item"><span class="num">5</span><span class="lbl">Email Sequences</span></div>
+    <div class="hero-meta-item"><span class="num">3</span><span class="lbl">Ad Copies</span></div>
+    <div class="hero-meta-item"><span class="num">2</span><span class="lbl">Lead Magnets</span></div>
+  </div>
+</div>
+
+<!-- FUNNEL STEPS -->
+<section id="overview">
+  <span class="section-label">Funnel Architecture</span>
+  <h2 class="section-title">How this funnel works</h2>
+  <p class="section-sub">Every step is designed to warm up the reader, build trust, and drive them naturally to your affiliate link.</p>
+  <div class="funnel-steps">
+    <div class="funnel-step">
+      <div class="step-icon">📣</div>
+      <div class="step-title">Traffic</div>
+      <div class="step-desc">Facebook / Instagram / SEO</div>
+    </div>
+    <div class="funnel-step">
+      <div class="step-icon">📄</div>
+      <div class="step-title">Bridge Page</div>
+      <div class="step-desc">Hook → Story → CTA</div>
+    </div>
+    <div class="funnel-step">
+      <div class="step-icon">✅</div>
+      <div class="step-title">Thank You</div>
+      <div class="step-desc">Confirm + warm up</div>
+    </div>
+    <div class="funnel-step">
+      <div class="step-icon">📧</div>
+      <div class="step-title">Email Sequence</div>
+      <div class="step-desc">5 emails over 7 days</div>
+    </div>
+    <div class="funnel-step">
+      <div class="step-icon">💰</div>
+      <div class="step-title">Affiliate Sale</div>
+      <div class="step-desc">Digistore24 checkout</div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- LANDING PAGE -->
+<section id="landing-page">
+  <span class="section-label">Task 1</span>
+  <h2 class="section-title">Landing Page (Bridge Page)</h2>
+  <p class="section-sub">A mobile-friendly bridge page that tells a story, builds trust, and sends warm visitors to your Digistore24 affiliate link.</p>
+
+  <!-- PREVIEW CHROME -->
+  <div class="lp-preview">
+    <div class="lp-bar">
+      <div class="dot" style="background:#E24B4A;"></div>
+      <div class="dot" style="background:#EF9F27;"></div>
+      <div class="dot" style="background:#639922;"></div>
+      <div class="lp-bar-url">yoursite.com/slim-secret</div>
+    </div>
+    <div class="lp-body">
+
+      <!-- Announcement Bar -->
+      <div class="lp-announcement">
+        🔥 Over 47,000 people have already used this simple morning trick to lose stubborn weight
+      </div>
+
+      <!-- Hero Section -->
+      <div class="lp-hero">
+        <div class="lp-eyebrow">Discovered by a Japanese wellness expert</div>
+        <h1 class="lp-headline">
+          The <em>"Crystal Water Secret"</em> That's Helping Busy People Finally Melt Fat — Without Dieting or the Gym
+        </h1>
+        <p class="lp-subhead">
+          If you've tried everything and still can't lose weight, it's not your fault. Scientists say the real problem may be hiding in plain sight — and the fix takes less than 30 seconds a day.
+        </p>
+        <a href="#" class="lp-cta-btn">Yes! Show Me the Secret →</a>
+        <p class="lp-cta-sub">🔒 Free to watch. No credit card needed.</p>
+      </div>
+
+      <!-- Pain Points Section -->
+      <div class="lp-section">
+        <h3>Sound familiar?</h3>
+        <p>You're not lazy. You're not broken. You're just <em>busy</em> — and the old weight loss advice simply wasn't designed for people like you.</p>
+        <div class="pain-grid">
+          <div class="pain-item">
+            <div class="icon">😩</div>
+            <p>You've tried diets that work for a week, then the weight comes right back</p>
+          </div>
+          <div class="pain-item">
+            <div class="icon">🏃</div>
+            <p>Exercise feels impossible between work, family, and zero energy left at the end of the day</p>
+          </div>
+          <div class="pain-item">
+            <div class="icon">😴</div>
+            <p>You wake up tired, feel bloated, and keep telling yourself "I'll start Monday"</p>
+          </div>
+          <div class="pain-item">
+            <div class="icon">😔</div>
+            <p>You've lost confidence and stopped feeling attractive in your own skin</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution Section -->
+      <div class="lp-section" style="background:#f7faf2;">
+        <h3>What if the problem isn't willpower — it's water?</h3>
+        <p>A new breakthrough inspired by ancient Japanese wellness rituals suggests that <strong>the way you hydrate</strong> plays a massive role in your metabolism, hunger signals, and fat-burning hormones.</p>
+        <p>SlimCrystal is a specially designed crystal water bottle that infuses your water with natural gemstone energy — potentially re-activating your body's own fat-burning system, just from your daily water intake.</p>
+        <p>No counting calories. No skipping meals. No grueling workouts.</p>
+      </div>
+
+      <!-- Benefits Section -->
+      <div class="lp-section">
+        <h3>Here's what people are experiencing</h3>
+        <ul class="benefit-list">
+          <li><span class="check">✓</span>Noticeable reduction in stubborn belly and hip fat within weeks</li>
+          <li><span class="check">✓</span>Fewer sugar cravings and emotional eating episodes</li>
+          <li><span class="check">✓</span>More energy throughout the day — even on busy, stressful days</li>
+          <li><span class="check">✓</span>Better sleep and waking up refreshed</li>
+          <li><span class="check">✓</span>A simple ritual you can do anywhere — office, home, travel</li>
+          <li><span class="check">✓</span>No strict diets, no gym memberships, no willpower battles</li>
+        </ul>
+      </div>
+
+      <!-- Story Section -->
+      <div class="lp-section" style="background:#fffdf7;">
+        <h3>Meet Sarah — a 38-year-old marketing manager from Dallas</h3>
+        <div class="story-box">
+          <div class="author">Sarah K., 38 — Dallas, TX</div>
+          <p>"After having my second kid, I couldn't lose the weight no matter what I tried. I was exhausted, embarrassed, and honestly just gave up. A friend told me about SlimCrystal. I was skeptical — I mean, crystal water? But I figured, what do I have to lose? Three months later, I'm down 22 pounds. I didn't change my diet or join a gym. I just changed how I drank water. I genuinely wish I found this sooner."</p>
+        </div>
+        <p>Sarah's story isn't unique. Thousands of people in their 30s and 40s are discovering this simple approach — and seeing real results.</p>
+        <div style="text-align:center; margin-top:1.5rem;">
+          <a href="#" class="lp-cta-btn">Watch the Free Presentation →</a>
+          <p class="lp-cta-sub">Spots are limited — video may be removed soon</p>
+        </div>
+      </div>
+
+      <!-- Trust Bar -->
+      <div class="trust-bar">
+        <div class="trust-item">🔒 100% Secure</div>
+        <div class="trust-item">⭐ 4.8/5 Average Rating</div>
+        <div class="trust-item">🇺🇸 Made in the USA</div>
+        <div class="trust-item">↩ 365-Day Guarantee</div>
+        <div class="trust-item">📦 Free Shipping Available</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">💡</div>
+      <div class="card-title">Implementation Notes</div>
+    </div>
+    <ul style="padding-left:1.2rem; font-size:14px; color:var(--text-muted); line-height:2;">
+      <li>Replace <code>#</code> in CTA buttons with your Digistore24 affiliate link</li>
+      <li>Host this as a simple HTML page on your own domain or landing page builder (Leadpages, ClickFunnels, Carrd)</li>
+      <li>Collect emails via an opt-in form before sending to the offer (recommended)</li>
+      <li>Use countdown timer tools like Deadline Funnel for added urgency</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- THANK YOU PAGE -->
+<section id="thankyou">
+  <span class="section-label">Task 2</span>
+  <h2 class="section-title">Thank You Page</h2>
+  <p class="section-sub">Confirms their signup, warms them up emotionally, and gently redirects to the affiliate offer.</p>
+
+  <div class="ty-preview">
+    <div class="lp-bar">
+      <div class="dot" style="background:#E24B4A;"></div>
+      <div class="dot" style="background:#EF9F27;"></div>
+      <div class="dot" style="background:#639922;"></div>
+      <div class="lp-bar-url">yoursite.com/thank-you</div>
+    </div>
+    <div class="ty-body">
+      <div class="ty-icon">✓</div>
+      <h2>You're in! Check your inbox.</h2>
+      <p>Your free guide <em>"The 3-Day Water Reset"</em> is on its way to your email. While you wait, I want to share something important with you.</p>
+
+      <div class="ty-teaser">
+        <h4>⚡ One more thing before you go…</h4>
+        <p>The free guide I sent you covers the basics — but thousands of people are getting faster results using the exact method in this short video. It takes just 2 minutes to watch and it could change everything.</p>
+      </div>
+
+      <p style="font-size:15px; color:#444; margin-bottom:1rem;">This isn't something I share with everyone. But since you've taken the first step, I want you to have the best shot at success.</p>
+
+      <a href="#" class="lp-cta-btn" style="display:block; text-align:center; margin-bottom:.6rem;">Watch the Free Video Now →</a>
+      <p style="font-size:12px; color:var(--text-muted);">Opens in a new tab • Free to watch • No purchase required</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- EMAIL FUNNEL -->
+<section id="emails">
+  <span class="section-label">Task 3</span>
+  <h2 class="section-title">Email Funnel — 5-Part Sequence</h2>
+  <p class="section-sub">Send these over 7 days. Each email builds trust and moves the reader closer to clicking your affiliate link.</p>
+
+  <div class="email-tabs">
+    <button class="email-tab active" onclick="showEmail(0)">Email 1 — Welcome</button>
+    <button class="email-tab" onclick="showEmail(1)">Email 2 — Problem</button>
+    <button class="email-tab" onclick="showEmail(2)">Email 3 — Solution</button>
+    <button class="email-tab" onclick="showEmail(3)">Email 4 — Proof</button>
+    <button class="email-tab" onclick="showEmail(4)">Email 5 — Urgency</button>
+  </div>
+
+  <!-- EMAIL 1 -->
+  <div class="email-card active" id="email-0">
+    <div class="email-meta">
+      <div class="email-meta-row"><span class="field">Day:</span><span class="value">Day 0 (Immediately after signup)</span></div>
+      <div class="email-meta-row"><span class="field">Subject:</span><span class="value subject">Welcome! + The mistake I made for 6 years 😬</span></div>
+      <div class="email-meta-row"><span class="field">Goal:</span><span class="value">Build rapport, share relatable story, soft intro to offer</span></div>
+    </div>
+    <div class="email-body">
+      <p class="greeting">Hey [First Name],</p>
+      <p>Welcome — I'm so glad you're here.</p>
+      <p>My name is [Your Name], and I want to start by telling you something a little embarrassing.</p>
+      <p>For 6 years, I fought my weight like it was a personal enemy. I counted every calorie. I dragged myself to the gym at 6am. I tried every diet — keto, intermittent fasting, juice cleanses. Some worked for a week. Then the weight always came back.</p>
+      <p>I was convinced there was something wrong with me. That I just lacked discipline.</p>
+      <p>Then one day, my doctor said something that stopped me cold: <em>"Have you thought about how you're drinking water?"</em></p>
+      <p>I thought he was joking. He wasn't.</p>
+      <p>What I discovered after that changed everything for me — and it might just do the same for you.</p>
+      <p>Over the next few days, I'm going to share exactly what I learned. But if you're curious and can't wait, here's the short version:</p>
+      <div class="cta-block">
+        <p>A short video explains the science behind what I discovered — and why so many busy people in their 30s and 40s are finally seeing the results they've been chasing for years.</p>
+        <a href="#" class="cta-link">Watch it here (it's free) →</a>
+      </div>
+      <p>Talk soon,</p>
+      <div class="sign">[Your Name]<br><em>P.S. — Check your spam if you don't see my next email tomorrow. I'm sending you something important.</em></div>
+    </div>
+  </div>
+
+  <!-- EMAIL 2 -->
+  <div class="email-card" id="email-1">
+    <div class="email-meta">
+      <div class="email-meta-row"><span class="field">Day:</span><span class="value">Day 2</span></div>
+      <div class="email-meta-row"><span class="field">Subject:</span><span class="value subject">Why your diet keeps failing you (it's not the food)</span></div>
+      <div class="email-meta-row"><span class="field">Goal:</span><span class="value">Agitate pain, build curiosity, re-introduce offer</span></div>
+    </div>
+    <div class="email-body">
+      <p class="greeting">Hey [First Name],</p>
+      <p>Let me ask you something honestly: How many diets have you tried?</p>
+      <p>If you're anything like me — or like the thousands of people I've spoken to — the answer is "more than I care to count."</p>
+      <p>And here's what's so frustrating: most of those diets probably did work… for a little while. You lost a few pounds. You felt hopeful. And then life happened — a stressful week, a family dinner, a birthday cake — and suddenly you were back where you started.</p>
+      <p>That's not weakness. That's biology fighting back.</p>
+      <p>Here's what most diet plans never tell you: <strong>when your body is in a chronic state of stress and dehydration, your fat-burning hormones literally shut down.</strong> It doesn't matter how little you eat. The weight won't move.</p>
+      <p>Busy people in their 30s and 40s are especially vulnerable. Long hours, poor sleep, constant stress — all of it creates the exact conditions your body needs to hold onto fat.</p>
+      <p>The solution isn't another diet. It's fixing the root cause.</p>
+      <div class="cta-block">
+        <p>This short video explains the hidden reason your metabolism may be stuck — and what a simple 30-second morning habit can do to wake it back up.</p>
+        <a href="#" class="cta-link">Watch the free video →</a>
+      </div>
+      <div class="sign">[Your Name]<br><em>P.S. — Tomorrow I'll introduce you to the exact thing that finally worked for me. Keep an eye on your inbox.</em></div>
+    </div>
+  </div>
+
+  <!-- EMAIL 3 -->
+  <div class="email-card" id="email-2">
+    <div class="email-meta">
+      <div class="email-meta-row"><span class="field">Day:</span><span class="value">Day 3</span></div>
+      <div class="email-meta-row"><span class="field">Subject:</span><span class="value subject">I was drinking water wrong my whole life 💧</span></div>
+      <div class="email-meta-row"><span class="field">Goal:</span><span class="value">Introduce SlimCrystal naturally through story</span></div>
+    </div>
+    <div class="email-body">
+      <p class="greeting">Hey [First Name],</p>
+      <p>Okay, I promised I'd tell you what finally worked for me. So here goes.</p>
+      <p>After years of failed diets, I stumbled across research from a Japanese wellness practitioner who studied why people in certain parts of Japan stayed lean well into their 60s and 70s — without dieting at all.</p>
+      <p>His finding? It came down to <em>the quality of the water they drank</em> — specifically, water that had been naturally structured and infused with mineral-rich gemstones.</p>
+      <p>I know. I was skeptical too.</p>
+      <p>But the science is actually fascinating. Certain crystals — when placed in water — may help restructure water molecules to make them more bioavailable. That means your cells absorb water more efficiently, which can help regulate hormones, reduce hunger signals, and improve your metabolism.</p>
+      <p>I tried a crystal-infused water bottle called <strong>SlimCrystal</strong>. I drank it every morning before breakfast. Within the first week, I noticed my cravings had dropped. Within a month, my clothes were fitting differently.</p>
+      <div class="cta-block">
+        <p>You can watch the full story — and hear from the people behind it — in this free video. It's around 10 minutes and completely worth your time.</p>
+        <a href="#" class="cta-link">See SlimCrystal in action →</a>
+      </div>
+      <div class="sign">[Your Name]<br><em>P.S. — Tomorrow I'll share some of the results people have gotten. Some of them genuinely surprised me.</em></div>
+    </div>
+  </div>
+
+  <!-- EMAIL 4 -->
+  <div class="email-card" id="email-3">
+    <div class="email-meta">
+      <div class="email-meta-row"><span class="field">Day:</span><span class="value">Day 5</span></div>
+      <div class="email-meta-row"><span class="field">Subject:</span><span class="value subject">"I lost 18 lbs and I didn't even try" — real results 👀</span></div>
+      <div class="email-meta-row"><span class="field">Goal:</span><span class="value">Social proof + benefits + direct offer push</span></div>
+    </div>
+    <div class="email-body">
+      <p class="greeting">Hey [First Name],</p>
+      <p>I want to share a few messages I've seen from people who tried SlimCrystal.</p>
+      <p><em>"I was doubtful but I had nothing to lose. Two months later — 18 pounds gone, no gym, no special diet. I just drink my SlimCrystal water every morning." — Marcus T., 41</em></p>
+      <p><em>"My energy is through the roof. I stopped snacking at night completely. I didn't even try to stop — the cravings just disappeared." — Jess M., 35</em></p>
+      <p><em>"After my second pregnancy, nothing worked. SlimCrystal changed everything. My husband asked if I'd been working out. I hadn't." — Dana R., 38</em></p>
+      <p>These are real people — busy, stressed, and skeptical just like you might be. And what they all have in common is they took one small step.</p>
+      <p>Here's what SlimCrystal can do for you:</p>
+      <ul style="padding-left:1.2rem; color:#333; font-size:15px; line-height:2.2;">
+        <li>Potentially boost your metabolism and fat-burning hormones naturally</li>
+        <li>Reduce hunger cravings — especially sugar and late-night snacking</li>
+        <li>Improve your energy, focus, and sleep quality</li>
+        <li>Give you a simple, beautiful daily ritual that takes 30 seconds</li>
+      </ul>
+      <div class="cta-block">
+        <p>Right now, the official page is offering a significant discount — but I'm not sure how long it'll last.</p>
+        <a href="#" class="cta-link">Check availability + discount →</a>
+      </div>
+      <div class="sign">[Your Name]<br><em>P.S. — I'm sending one final email tomorrow. It's important — please don't miss it.</em></div>
+    </div>
+  </div>
+
+  <!-- EMAIL 5 -->
+  <div class="email-card" id="email-4">
+    <div class="email-meta">
+      <div class="email-meta-row"><span class="field">Day:</span><span class="value">Day 7</span></div>
+      <div class="email-meta-row"><span class="field">Subject:</span><span class="value subject">Last chance — this may disappear tomorrow ⚠️</span></div>
+      <div class="email-meta-row"><span class="field">Goal:</span><span class="value">Final urgency push, overcome objections, strong CTA</span></div>
+    </div>
+    <div class="email-body">
+      <p class="greeting">Hey [First Name],</p>
+      <p>I'll keep this short because I know you're busy.</p>
+      <p>This is the last email I'll send about SlimCrystal — and I wanted to make sure you had one final chance before the current discount expires.</p>
+      <p>Here's the truth: you've probably tried a lot of things to lose weight. Some worked a little. Most didn't last. And right now you're likely thinking "is this really different?"</p>
+      <p>I get it. I thought the same thing.</p>
+      <p>But here's what made me finally try it: <strong>there's a 365-day money-back guarantee.</strong> That's a full year. If you don't see results, you get every penny back. No questions asked.</p>
+      <p>So the real question isn't "does it work." The question is: <em>what do you have to lose by trying?</em></p>
+      <p>The discount they're currently offering won't last — and the guarantee means you're risking nothing.</p>
+      <div class="cta-block">
+        <p>This is the last time I'll send this link. After today, I'm moving on — but I wanted you to have every opportunity to try this for yourself.</p>
+        <a href="#" class="cta-link">Claim your discount before it's gone →</a>
+      </div>
+      <p>Whatever you decide — I'm rooting for you.</p>
+      <div class="sign">[Your Name]<br><em>P.S. — Even if you're not ready today, bookmark that page. The 365-day guarantee alone makes it worth coming back to.</em></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- BONUS -->
+<section id="bonus">
+  <span class="section-label">Task 4 — Bonus</span>
+  <h2 class="section-title">Ad Copies, Blog Titles & Lead Magnets</h2>
+  <p class="section-sub">Use these to drive traffic to your bridge page from paid ads and organic SEO.</p>
+
+  <!-- ADS -->
+  <h3 style="font-size:1.2rem; margin-bottom:1rem;">Facebook / Instagram Ad Copies</h3>
+  <div class="ad-grid">
+    <div class="ad-card">
+      <div class="ad-img">💧</div>
+      <div class="ad-content">
+        <div class="ad-platform">Facebook / Instagram — Curiosity Hook</div>
+        <p class="ad-headline">She lost 22 lbs just by changing how she drinks water.</p>
+        <p>No gym. No diet. No willpower battles. Sarah, 38, was skeptical too — until she tried this Japanese morning ritual that's going viral with busy moms and professionals. Watch the 2-minute explanation.</p>
+        <span class="ad-cta-tag">Learn More →</span>
+      </div>
+    </div>
+    <div class="ad-card">
+      <div class="ad-img">🔥</div>
+      <div class="ad-content">
+        <div class="ad-platform">Facebook — Problem Aware</div>
+        <p class="ad-headline">Still can't lose weight even though you're trying everything?</p>
+        <p>It's not your fault. Research suggests that chronic stress and poor hydration may be literally blocking your body from burning fat — no matter how little you eat. Here's the 30-second fix.</p>
+        <span class="ad-cta-tag">See How →</span>
+      </div>
+    </div>
+    <div class="ad-card">
+      <div class="ad-img">✨</div>
+      <div class="ad-content">
+        <div class="ad-platform">Instagram — Lifestyle / Visual</div>
+        <p class="ad-headline">What if losing weight was as simple as your morning water?</p>
+        <p>47,000+ people are using this crystal water bottle to support healthy metabolism, reduce cravings, and feel lighter — without changing their diet. Takes 30 seconds. Ships free. 365-day guarantee.</p>
+        <span class="ad-cta-tag">Shop Now →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG + LEAD MAGNETS -->
+  <div class="bonus-grid" style="margin-top:2rem;">
+    <div class="bonus-card">
+      <div class="b-header">
+        <div class="b-icon green">📝</div>
+        <div class="b-title">3 SEO Blog Titles</div>
+      </div>
+      <ul>
+        <li>
+          <strong>Title 1 — High Search Volume</strong>
+          "Why You Can't Lose Weight Even When You're Eating Less (The Hidden Hormone Sabotage)"
+        </li>
+        <li>
+          <strong>Title 2 — Review Style</strong>
+          "SlimCrystal Review 2024: Does This Crystal Water Bottle Really Help You Lose Weight?"
+        </li>
+        <li>
+          <strong>Title 3 — Listicle</strong>
+          "7 Morning Habits Busy People Are Using to Lose Weight Without the Gym"
+        </li>
+      </ul>
+    </div>
+
+    <div class="bonus-card">
+      <div class="b-header">
+        <div class="b-icon amber">🎁</div>
+        <div class="b-title">2 Lead Magnet Ideas</div>
+      </div>
+      <ul>
+        <li>
+          <strong>Lead Magnet 1 — PDF Guide</strong>
+          "The 3-Day Water Reset: A Simple Morning Protocol to Jumpstart Your Metabolism" — A 5-page PDF that teaches the core concept and leaves them wanting the full solution (your affiliate product).
+        </li>
+        <li>
+          <strong>Lead Magnet 2 — Quiz Funnel</strong>
+          "What's Really Blocking Your Weight Loss? Take the 60-Second Quiz" — A short personality/lifestyle quiz that identifies their #1 weight loss blocker, then recommends SlimCrystal as the solution.
+        </li>
+      </ul>
+    </div>
+
+    <div class="bonus-card">
+      <div class="b-header">
+        <div class="b-icon coral">⚙️</div>
+        <div class="b-title">Recommended Tools</div>
+      </div>
+      <ul>
+        <li>
+          <strong>Landing Page Builder</strong>
+          Carrd (free), Leadpages, or ClickFunnels
+        </li>
+        <li>
+          <strong>Email Autoresponder</strong>
+          ConvertKit, MailerLite, or GetResponse
+        </li>
+        <li>
+          <strong>Ad Platform</strong>
+          Facebook Ads Manager — target women/men 28–48, interests: weight loss, healthy living, wellness
+        </li>
+        <li>
+          <strong>Tracking</strong>
+          ClickMagick or Voluum for affiliate link tracking
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <p>This funnel was created for affiliate marketing educational purposes. Replace <code>[Your Name]</code>, <code>[First Name]</code>, and all <code>#</code> CTA links with your real details and Digistore24 affiliate URL before publishing.</p>
+  <p style="margin-top:.5rem;">Always comply with <a href="#">FTC disclosure guidelines</a> by clearly stating affiliate relationships in your content.</p>
+</div>
+
+<script>
+  function showEmail(index) {
+    document.querySelectorAll('.email-card').forEach((c, i) => {
+      c.classList.toggle('active', i === index);
+    });
+    document.querySelectorAll('.email-tab').forEach((t, i) => {
+      t.classList.toggle('active', i === index);
+    });
+  }
+
+  // Nav active state on scroll
+  const sections = document.querySelectorAll('section[id], div.funnel-hero');
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s.id || 'overview';
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+</body>
+</html>
