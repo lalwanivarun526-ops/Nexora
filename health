@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AffiliateEdge — Earn While You Promote</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #E8A020;
+    --gold-light: #FDF0D5;
+    --gold-dark: #A06A0A;
+    --ink: #0D0D0D;
+    --ink2: #1A1A1A;
+    --smoke: #F5F3EE;
+    --muted: #7A7570;
+    --white: #FFFFFF;
+    --green: #1A7A4A;
+    --green-bg: #E8F5ED;
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ink);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(13,13,13,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--gold);
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+
+  .logo span { color: var(--white); }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav ul a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+
+  nav ul a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--ink) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 500 !important;
+  }
+
+  .nav-cta:hover { background: #f0b030; color: var(--ink) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(232,160,32,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(232,160,32,0.07) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(232,160,32,0.12);
+    border: 1px solid rgba(232,160,32,0.3);
+    color: var(--gold);
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-bottom: 1.75rem;
+    text-transform: uppercase;
+  }
+
+  .badge-dot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 1.0;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+  }
+
+  h1 em {
+    font-style: normal;
+    color: var(--gold);
+    position: relative;
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.6);
+    max-width: 540px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--ink);
+    padding: 0.85rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.15s, background 0.15s;
+    font-family: 'DM Sans', sans-serif;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: #f0b030; transform: translateY(-2px); }
+
+  .btn-ghost {
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    padding: 0.85rem 2rem;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.18);
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat span {
+    display: block;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-stat p {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* MARQUEE */
+  .marquee-wrap {
+    background: var(--gold);
+    padding: 0.9rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee-track {
+    display: inline-block;
+    animation: marquee 24s linear infinite;
+  }
+
+  .marquee-track span {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--ink);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 2.5rem;
+  }
+
+  .marquee-track span::before {
+    content: '★';
+    margin-right: 0.5rem;
+    opacity: 0.5;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* HOW IT WORKS */
+  .section {
+    padding: 6rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+
+  .section-intro {
+    color: rgba(255,255,255,0.55);
+    font-size: 1rem;
+    max-width: 480px;
+    font-weight: 300;
+    margin-bottom: 3.5rem;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5px;
+    background: rgba(255,255,255,0.06);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .step {
+    background: var(--ink2);
+    padding: 2.5rem;
+    position: relative;
+  }
+
+  .step-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgba(232,160,32,0.15);
+    line-height: 1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+  }
+
+  .step-icon {
+    width: 44px; height: 44px;
+    background: rgba(232,160,32,0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .step h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+    letter-spacing: -0.02em;
+  }
+
+  .step p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  /* COMMISSION */
+  .commission-section {
+    background: var(--ink2);
+    padding: 6rem 2rem;
+  }
+
+  .commission-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .tier {
+    background: var(--ink);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius);
+    padding: 2rem;
+    position: relative;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .tier:hover {
+    border-color: rgba(232,160,32,0.3);
+    transform: translateY(-4px);
+  }
+
+  .tier.featured {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(232,160,32,0.08) 0%, var(--ink) 60%);
+  }
+
+  .tier-badge {
+    position: absolute;
+    top: -1px; right: 1.5rem;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .tier-name {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 0.5rem;
+  }
+
+  .tier-rate {
+    font-family: 'Syne', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.04em;
+  }
+
+  .tier-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+
+  .tier-perks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .tier-perks li {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.65);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .tier-perks li::before {
+    content: '';
+    display: block;
+    width: 16px; height: 16px;
+    background: rgba(232,160,32,0.15);
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke='%23E8A020' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* DASHBOARD PREVIEW */
+  .dashboard-section {
+    padding: 6rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .dashboard-mock {
+    margin-top: 3rem;
+    background: #141414;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .dash-topbar {
+    background: #1C1C1C;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dash-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+  .dash-inner {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .dash-card {
+    background: #1C1C1C;
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+
+  .dash-card-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+  }
+
+  .dash-card-val {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  .dash-card-change {
+    font-size: 0.78rem;
+    color: #3DB870;
+    margin-top: 0.2rem;
+  }
+
+  .dash-chart-area {
+    padding: 0 2rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .dash-chart-area { grid-template-columns: 1fr; }
+  }
+
+  .dash-list {
+    background: #1C1C1C;
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+
+  .dash-list-title {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 1rem;
+  }
+
+  .dash-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.85rem;
+  }
+
+  .dash-row:last-child { border-bottom: none; }
+  .dash-row span:first-child { color: rgba(255,255,255,0.65); }
+  .dash-row span:last-child { color: var(--gold); font-weight: 500; }
+
+  .dash-bar-wrap {
+    background: #1C1C1C;
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+
+  .bar-row {
+    margin-bottom: 0.85rem;
+  }
+
+  .bar-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0.35rem;
+  }
+
+  .bar-track {
+    background: rgba(255,255,255,0.07);
+    border-radius: 4px;
+    height: 6px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 4px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-section {
+    background: var(--ink2);
+    padding: 6rem 2rem;
+  }
+
+  .testimonials-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 3rem;
+  }
+
+  .testimonial {
+    background: var(--ink);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+  }
+
+  .stars {
+    color: var(--gold);
+    font-size: 0.85rem;
+    margin-bottom: 0.9rem;
+    letter-spacing: 0.1em;
+  }
+
+  .testimonial blockquote {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .testimonial-author strong {
+    font-size: 0.88rem;
+    font-weight: 500;
+    display: block;
+  }
+
+  .testimonial-author span {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: 6rem 2rem;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 1.5rem 0;
+    cursor: pointer;
+  }
+
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+    gap: 1rem;
+  }
+
+  .faq-toggle {
+    width: 22px; height: 22px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    color: var(--gold);
+    transition: transform 0.25s;
+  }
+
+  .faq-a {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.7;
+    font-weight: 300;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding-top 0.3s;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 200px;
+    padding-top: 0.75rem;
+  }
+
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+  /* CTA FINAL */
+  .final-cta {
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(232,160,32,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .final-cta h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    max-width: 700px;
+    margin: 0 auto 1.25rem;
+  }
+
+  .final-cta p {
+    color: rgba(255,255,255,0.5);
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 440px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .input-row {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 440px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .input-row input {
+    flex: 1;
+    min-width: 220px;
+    padding: 0.85rem 1.25rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+  }
+
+  .input-row input::placeholder { color: rgba(255,255,255,0.3); }
+  .input-row input:focus { border-color: rgba(232,160,32,0.5); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  footer p {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.25);
+  }
+
+  footer a {
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: color 0.2s;
+  }
+
+  footer a:hover { color: var(--gold); }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    nav ul { display: none; }
+    .hero-stats { gap: 1.5rem; }
+    .dash-chart-area, .dash-inner { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Affiliate<span>Edge</span></a>
+  <ul>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#commissions">Commissions</a></li>
+    <li><a href="#dashboard">Dashboard</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#join" class="nav-cta">Join Free</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div style="position:relative; z-index:1;">
+    <div class="badge">
+      <div class="badge-dot"></div>
+      Affiliate Program — Now Open
+    </div>
+    <h1>Turn Your Audience<br>Into <em>Real Income</em></h1>
+    <p class="hero-sub">Share your unique link. Earn up to 40% commission on every sale. Get paid monthly, on time, every time.</p>
+    <div class="cta-group">
+      <a href="#join" class="btn-primary">Start Earning Free →</a>
+      <a href="#how" class="btn-ghost">See how it works</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span>$2.4M+</span>
+        <p>Paid to affiliates</p>
+      </div>
+      <div class="hero-stat">
+        <span>12,000+</span>
+        <p>Active partners</p>
+      </div>
+      <div class="hero-stat">
+        <span>40%</span>
+        <p>Max commission</p>
+      </div>
+      <div class="hero-stat">
+        <span>48hr</span>
+        <p>Payout speed</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>No hidden fees</span><span>Instant link generation</span><span>Real-time analytics</span><span>30-day cookie window</span><span>Multiple payout methods</span><span>Dedicated support</span><span>Weekly payouts available</span><span>Custom promo materials</span>
+    <span>No hidden fees</span><span>Instant link generation</span><span>Real-time analytics</span><span>30-day cookie window</span><span>Multiple payout methods</span><span>Dedicated support</span><span>Weekly payouts available</span><span>Custom promo materials</span>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+  <p class="section-label">Process</p>
+  <h2>Start earning in<br>three simple steps</h2>
+  <p class="section-intro">No experience needed. Sign up free and start sharing your link today.</p>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-icon">🔗</div>
+      <h3>Get Your Link</h3>
+      <p>Sign up free and instantly receive your unique affiliate tracking link and marketing materials.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-icon">📣</div>
+      <h3>Share & Promote</h3>
+      <p>Share your link on social media, your blog, YouTube, email list — anywhere your audience lives.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-icon">💰</div>
+      <h3>Earn Commission</h3>
+      <p>Earn up to 40% on every successful sale. Track earnings in real-time and get paid monthly.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-icon">📈</div>
+      <h3>Scale Up</h3>
+      <p>As your sales grow, unlock higher commission tiers and exclusive bonuses automatically.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMMISSION TIERS -->
+<div class="commission-section" id="commissions">
+  <div class="commission-inner">
+    <p class="section-label">Commission Tiers</p>
+    <h2>The more you earn,<br>the more you keep</h2>
+    <p class="section-intro" style="color:rgba(255,255,255,0.5)">Unlock better rates automatically as your monthly referrals grow.</p>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tier-name">Starter</div>
+        <div class="tier-rate">20%</div>
+        <div class="tier-desc">0 – 10 sales/month</div>
+        <ul class="tier-perks">
+          <li>Unique tracking link</li>
+          <li>Real-time dashboard</li>
+          <li>Monthly payouts</li>
+          <li>Email support</li>
+        </ul>
+      </div>
+      <div class="tier featured">
+        <div class="tier-badge">Most Popular</div>
+        <div class="tier-name">Growth</div>
+        <div class="tier-rate">30%</div>
+        <div class="tier-desc">11 – 50 sales/month</div>
+        <ul class="tier-perks">
+          <li>Everything in Starter</li>
+          <li>Custom promo banners</li>
+          <li>Bi-weekly payouts</li>
+          <li>Priority support</li>
+          <li>Performance bonuses</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <div class="tier-name">Elite</div>
+        <div class="tier-rate">40%</div>
+        <div class="tier-desc">51+ sales/month</div>
+        <ul class="tier-perks">
+          <li>Everything in Growth</li>
+          <li>Dedicated account manager</li>
+          <li>Weekly payouts</li>
+          <li>Co-marketing opportunities</li>
+          <li>Early access to new products</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD PREVIEW -->
+<section class="dashboard-section" id="dashboard">
+  <p class="section-label">Your Control Panel</p>
+  <h2>Track everything<br>in real-time</h2>
+  <p class="section-intro">A clean, powerful dashboard to monitor your clicks, conversions, and earnings at a glance.</p>
+
+  <div class="dashboard-mock">
+    <div class="dash-topbar">
+      <div class="dash-dot" style="background:#FF5F5A"></div>
+      <div class="dash-dot" style="background:#FFBD2E"></div>
+      <div class="dash-dot" style="background:#27C93F"></div>
+      <span style="margin-left:0.75rem; font-size:0.78rem; color:rgba(255,255,255,0.25); font-family:'DM Sans',sans-serif;">affiliate.yoursite.com/dashboard</span>
+    </div>
+    <div class="dash-inner">
+      <div class="dash-card">
+        <div class="dash-card-label">Total Earned</div>
+        <div class="dash-card-val">$3,240</div>
+        <div class="dash-card-change">↑ +18% this month</div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-label">Clicks</div>
+        <div class="dash-card-val">8,540</div>
+        <div class="dash-card-change">↑ +24% this month</div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-label">Conversions</div>
+        <div class="dash-card-val">127</div>
+        <div class="dash-card-change">↑ +12% this month</div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-label">Conversion Rate</div>
+        <div class="dash-card-val">1.5%</div>
+        <div class="dash-card-change">↑ +0.3% this month</div>
+      </div>
+    </div>
+    <div class="dash-chart-area">
+      <div class="dash-list">
+        <div class="dash-list-title">Recent Earnings</div>
+        <div class="dash-row"><span>Mar 19 — Referral</span><span>+$128</span></div>
+        <div class="dash-row"><span>Mar 17 — Referral</span><span>+$64</span></div>
+        <div class="dash-row"><span>Mar 15 — Referral</span><span>+$192</span></div>
+        <div class="dash-row"><span>Mar 12 — Referral</span><span>+$96</span></div>
+        <div class="dash-row"><span>Mar 10 — Referral</span><span>+$80</span></div>
+      </div>
+      <div class="dash-bar-wrap">
+        <div class="dash-list-title">Traffic Sources</div>
+        <div class="bar-row">
+          <div class="bar-info"><span>Instagram</span><span>42%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:42%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-info"><span>YouTube</span><span>28%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:28%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-info"><span>Blog / SEO</span><span>18%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:18%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-info"><span>Email</span><span>12%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:12%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials-section">
+  <div class="testimonials-inner">
+    <p class="section-label">Affiliates Love Us</p>
+    <h2>Real results from<br>real partners</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I made back my first month's earnings within two weeks of joining. The dashboard makes everything so clear."</blockquote>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:rgba(232,160,32,0.15); color:var(--gold);">RK</div>
+          <div>
+            <strong>Rahul K.</strong>
+            <span>Tech YouTuber, 80K subs</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"After hitting the Growth tier, my monthly income from this program alone is $2,000+. Payouts are always on time."</blockquote>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:rgba(59,184,112,0.12); color:#3DB870;">PM</div>
+          <div>
+            <strong>Priya M.</strong>
+            <span>Lifestyle blogger</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The 30-day cookie window is a game-changer. I get credit for sales even when people take their time deciding."</blockquote>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:rgba(53,138,221,0.12); color:#378ADD;">AS</div>
+          <div>
+            <strong>Arjun S.</strong>
+            <span>Instagram creator, 120K followers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <p class="section-label">FAQ</p>
+  <h2>Common questions</h2>
+
+  <div class="faq-item open">
+    <div class="faq-q">How and when do I get paid? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">We pay out via bank transfer, PayPal, or UPI on the 1st of every month for the previous month's earnings. Growth and Elite tier members can request bi-weekly or weekly payouts. Minimum payout threshold is ₹500 / $10.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How long does the cookie last? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">Our cookie window is 30 days. That means if someone clicks your link and purchases anytime within 30 days, you get the commission. No lost sales.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Is there a cost to join? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">Absolutely not. Joining the affiliate program is completely free. There are no hidden costs, setup fees, or monthly charges — ever.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Do I need a website or large audience? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">No! You can be a micro-influencer, a blogger, a YouTuber, or simply someone who wants to share with friends. Any audience size is welcome. We provide you with all the marketing materials you need.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How do tier upgrades work? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">Tier upgrades are automatic. We calculate your sales each calendar month. If you hit a new tier, your commission rate upgrades instantly for all new sales in the current and future months.</div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="join">
+  <div class="final-cta-bg"></div>
+  <div style="position:relative; z-index:1;">
+    <p class="section-label">Join 12,000+ Partners</p>
+    <h2>Ready to start<br><em>earning today?</em></h2>
+    <p>Drop your email below and we'll send you your affiliate link within minutes. Free forever.</p>
+    <div class="input-row">
+      <input type="email" placeholder="Your email address" />
+      <button class="btn-primary" style="white-space:nowrap;">Get My Link →</button>
+    </div>
+    <p style="margin-top:1rem; font-size:0.78rem; color:rgba(255,255,255,0.25);">No spam. Unsubscribe anytime. Takes 2 minutes.</p>
+  </div>
+</section>
+
+<footer>
+  <a href="#" class="logo" style="font-size:1.1rem;">Affiliate<span>Edge</span></a>
+  <div class="footer-links">
+    <a href="#">Terms</a>
+    <a href="#">Privacy</a>
+    <a href="#">Contact</a>
+    <a href="#">Support</a>
+  </div>
+  <p>© 2026 AffiliateEdge. All rights reserved.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
